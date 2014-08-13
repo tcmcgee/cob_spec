@@ -22,6 +22,12 @@ class HttpBrowser
     response_present?
   end
 
+  def get_with_invalid_credentials(url)
+    encoded_auth = Base64.encode64("admin:password")
+    @response = HTTParty.get("http://#{host}:#{port}#{url}", :headers => {"Authorization" => "Basic #{encoded_auth}"});
+    response_present?
+  end
+
   def head(url)
     @response = HTTParty.head("http://#{host}:#{port}#{url}")
     response_present?
