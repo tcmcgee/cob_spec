@@ -11,11 +11,11 @@ A request passing username "admin" and password "hunter2" should return log info
 |get                          |/log                                                 |
 |put                          |/these                                               |
 |head                         |/requests                                            |
-|get with invalid credentials |/logs                                                |
+|get with credentials;        |/logs                     |admin:password            |
 |ensure                       |response code equals      |401                       |
 |ensure                       |body has content          |Authentication required   |
 |ensure                       |body does not have content|GET /log HTTP/1.1         |
-|get with credentials         |/logs                                                |
+|get with credentials;        |/logs                     |admin:hunter2             |
 |ensure                       |response code equals      |200                       |
 |ensure                       |body has content          |GET /log HTTP/1.1         |
 |ensure                       |body has content          |PUT /these HTTP/1.1       |
