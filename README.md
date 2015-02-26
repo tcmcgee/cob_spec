@@ -8,6 +8,8 @@ To test your server against the Cob Spec suite of tests, follow the instructions
     cd cob_spec
     mvn package
 
+**Note:** Make sure you are using java 1.7 otherwise you might get an error importing libraries.
+
 Starting Fitnesse Server
 ------------------------
 Start the Fitnesse server on port 9090.
@@ -23,7 +25,7 @@ To run the tests you have to change three variables.
 
 - Navigate to the HttpTestSuite.
 - Click on Edit.
-- Update the paths for the User-Defined Variables.
+- Update the paths for the User-Defined Variables. (make sure to uncomment the variables '-')
   - `SERVER_START_COMMAND` is the command to start your server.
     - Example: `java -jar /User/somebody/project/my_jar.jar`
   - `PUBLIC_DIR` is the path to cob spec public folder.
