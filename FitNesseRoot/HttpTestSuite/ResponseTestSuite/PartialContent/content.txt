@@ -6,6 +6,9 @@
 |ensure  |body has partial file contents|public/partial_content.txt|from|0        |to|4 |
 |get     |/partial_content.txt          |range start               |    |range end|6    |
 |ensure  |response code equals          |206                                            |
+|ensure  |body has partial file contents|public/partial_content.txt|from|0        |to|6 |
+|get     |/partial_content.txt          |range start               |71  |range end|76   |
+|ensure  |response code equals          |206                                            |
 |ensure  |body has partial file contents|public/partial_content.txt|from|71       |to|76|
 |get     |/partial_content.txt          |range start               |4   |range end|     |
 |ensure  |response code equals          |206                                            |
