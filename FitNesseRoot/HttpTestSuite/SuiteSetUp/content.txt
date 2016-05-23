@@ -2,4 +2,5 @@
 |set start command|${SERVER_START_COMMAND}|
 |set port         |5000                   |
 |set directory    |${PUBLIC_DIR}          |
+|set logDirectory |${LOG_DIR}             |
 |start server                             |

@@ -7,5 +7,6 @@
 !3 User-Defined Variables
 !define SERVER_START_COMMAND {../build/Release/SwiftHTTPServer}
 !define PUBLIC_DIR {./public}
+!define LOG_DIR {../logs}
 
 !contents -R2 -g -p -f -h

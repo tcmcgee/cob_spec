@@ -2,6 +2,7 @@ public class Server {
     private String startCommand;
     private String directory;
     private String port;
+    private String logDirectory;
     static private Process process;
 
     public void setStartCommand(String command) {
@@ -16,8 +17,12 @@ public class Server {
         this.port = port;
     }
 
+    public void setLogDirectory(String logDirectory) {
+      this.logDirectory = logDirectory;
+    }
+
     public void startServer() throws Exception {
-        String command = startCommand + " -p " + port + " -d " + directory;
+        String command = startCommand + " -p " + port + " -d " + directory + " -l " + logDirectory;
         process = Runtime.getRuntime().exec(command);
         Thread.sleep(2000);
     }
